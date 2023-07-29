@@ -19,14 +19,15 @@ export class AppComponent {
   ngOnInit() {
     this.router.events.subscribe(event =>{
       if (event instanceof NavigationStart){
-         this.islogin=event.url
-         let url = location.pathname;
-         if(url.startsWith('/') || url.startsWith('/login')){
+                let url = location.pathname;
+let curenturl=event.url.split('/')
+console.log(curenturl[1]);
+
+         if(curenturl[1]==""){
           this.hasLogin = false;
          }
          else{
-          this.hasLogin = true;
-
+          this.hasLogin=true;
          }
       }
    })
