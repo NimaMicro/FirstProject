@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    direction: rtl!important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #fff!important;
+    font-family: iransans!important;
+}
+
+    @font-face {
+        font-family: iransans;
+        src: url(../src/assets/font/IRANSansMedium.ttf);
+    }
+     
