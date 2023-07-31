@@ -1,32 +1,36 @@
-<div class="container-fluid vh-100">
-  <div  class="bgcolor d-flex row w-100 h-100 row gy-5 ">
-<div class="card-container d-flex justify-content-center column-gap-5 w-100 my-4  col-lg-6 col-md-6 col-sm-12"
->
-  <div *ngFor="let i of card" class="card-course d-flex col-lg-6 col-md-6 col-sm-12 py-4 px-4 my-2 mx-2 rounded ">
-    <div class="d-flex flex-column justify-content-between">
-      <div class="d-flex justify-content-center align-items-center w-100">
-        <img
-          class="teacher-profile mx-2"
-          src="../assets/icons/nav-icon/profile-circle-svgrepo-com.svg"
-          alt=""
-        />
-        <h6>{{i.techername}}</h6>
-      </div>
-      
+<div class="bgcolor container-fluid overflow-x-hidden overflow-y-auto vh-100">
+  <div class="container w-100 h-100">
+    <div
+      class="d-flex flex-wrap align-items-center overflow-auto column-gap-5 col-lg-6 col-md-6 w-100"
+    >
+      <div
+        *ngFor="let i of card"
+        class="card-course d-flex py-4 px-4 my-2 mx-2 rounded"
+      >
+        <div class="d-flex flex-column justify-content-between">
+          <div class="d-flex justify-content-center align-items-center w-100">
+            <img
+              class="teacher-profile mx-2"
+              src="../assets/icons/nav-icon/profile-circle-svgrepo-com.svg"
+              alt=""
+            />
+            <h6>{{ i.techername }}</h6>
+          </div>
 
-      <div class="text-card d-flex justify-content-between">
-        <span>اسم درس</span>
-        <span>{{i.coursename}}</span>
+          <div class="text-card d-flex justify-content-between">
+            <span>اسم درس</span>
+            <span>{{ i.coursename }}</span>
+          </div>
+          <div class="text-card d-flex justify-content-between">
+            <span>بالاترین نمره</span>
+            <span>{{ i.highestscore }}/100</span>
+          </div>
+          <h6>{{ i.Description }}</h6>
+          <button class="btn btn-success btn-lg">مرور کن</button>
+        </div>
       </div>
-      <div class="text-card d-flex justify-content-between">
-        <span>بالاترین نمره</span>
-        <span>{{i.highestscore}}/100</span>
-      </div>
-      <h6>{{i.Description}}</h6>
-      <button class="btn btn-success btn-lg">مرور کن</button>
     </div>
   </div>
-</div>
 </div>
 
 
