@@ -6,10 +6,20 @@ import { Component, Input, OnInit,Output,EventEmitter } from '@angular/core';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-
+disable:boolean=false
   constructor() { }
   ngOnInit(): void {
     
   }
 
+  showSide(){
+    switch (this.disable){
+      case false:
+        this.disable=true
+        break;
+        case true:
+          this.disable=false
+          break
+    }
+      }
 }

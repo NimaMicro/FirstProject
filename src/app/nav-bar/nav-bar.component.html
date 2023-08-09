@@ -1,11 +1,9 @@
 <!--//navigation container -->
-<div
-  class="navigation-container container-fluid d-flex d-flex justify-content-between align-content-center"
->
+<div class="navigation-container overflow-hidden position-fixed container-fluid d-flex justify-content-between overflow-hidden">
   <!--//navigation logo -->
-  <div class="d-flex justify-content-start align-items-center h-100 w-25">
-    <div class="d-md-block d-sm-none h-100">
-      <a href="" class="d-flex justify-content-center">
+  <div class=" col-sm-4 h-100 w-25  d-flex align-items-center">
+    <div class="phone-screen d-none d-sm-none d-md-none d-lg-block h-100">
+      <a href="#" class="d-flex justify-content-center">
         <img
           class="fill-color w-100 h-100"
           src="../../assets/icons/nav-icon/logo.svg"
@@ -13,15 +11,19 @@
         />
       </a>
     </div>
-    <div class="d-md-none d-sm-block">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="burgured  d-block d-sm-block d-md-block d-lg-none  d-xs-block w-50 h-100 p-3 mx-4">
+      <div (click)="showSide()" class="d-flex flex-column justify-content-between align-items-center p-2 h-75" >
+        
+        <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+     
+      </div>
     </div>
   </div>
 
   <!--//navigation links -->
-  <div class="d-flex justify-content-between align-items-center w-25">
+  <div class="navigationlinks d-flex justify-content-between align-items-center mx-2 ">
     <div>
       <a class="nav-link rounded-circle aSizing" aria-current="page" href="#">
         <img
@@ -73,75 +75,77 @@
   </div>
 </div>
 
-<!-- <section
-    class=" custom_class section-style d-flex d-flex flex-column justify-content-between align-items-center my-4 row "
-  >
-    <div
-      class=" d-flex flex-column justify-content-center align-items-center mt-2 py-3"
-    >
-      <a href="">
-        <img
-          class="iconsizing fill-color"
-          src="../assets/icons/nav-icon/section-icon/book-open-svgrepo-com.svg"
-          alt=""
-        />
-      </a>
-      <label>درسای من</label>
-    </div>
 
-    <div
-      class="d-flex flex-column justify-content-center align-items-center py-3"
-    >
-      <a href="">
-        <img
-          class="iconsizing"
-          src="../assets/icons/nav-icon/section-icon/layer-svgrepo-com.svg"
-          alt=""
-      /></a>
-      <label>لیست دوره ها</label>
-    </div>
-    <div
-      class="d-flex flex-column justify-content-center align-items-center py-3"
-    >
-      <a href="">
-        <img
-          class="iconsizing"
-          src="../assets/icons/nav-icon/section-icon/task-square-svgrepo-com.svg"
-          alt=""
-      /></a>
-      <label>داشبورد</label>
-    </div>
-    <div
-      class="d-flex flex-column justify-content-center align-items-center py-3"
-    >
-      <a href="">
-        <img
-          class="iconsizing"
-          src="../assets/icons/nav-icon/section-icon/play-circle-svgrepo-com.svg"
-          alt=""
-      /></a>
-      <label>پخش زنده</label>
-    </div>
-    <div
-      class="d-flex flex-column justify-content-center align-items-center py-3"
-    >
-      <a href="">
-        <img
-          class="iconsizing"
-          src="../assets/icons/nav-icon/section-icon/document-text-svgrepo-com.svg"
-          alt=""
-      /></a>
-      <label>پیام ها</label>
-    </div>
-    <div
-      class="d-flex flex-column justify-content-center align-items-center py-3"
-    >
-      <a href="">
-        <img
-          class="iconsizing"
-          src="../assets/icons/nav-icon/section-icon/empty-wallet-svgrepo-com.svg"
-          alt=""
-      /></a>
-      <label>سوابق مالی</label>
-    </div>
-  </section> -->
+
+<section
+  class="section-style d-flex flex-column fixed-top justify-content-between align-items-center position-absolute  d-sm-none d-md-none d-lg-block  d-xs-block my-4 mx-4 row" *ngIf="disable"
+>
+  <div
+    class="d-flex flex-column justify-content-center align-items-center mt-2 py-3"
+  >
+    <a href="#">
+      <img
+        class="iconsizing fill-color"
+        src="../assets/icons/nav-icon/section-icon/book-open-svgrepo-com.svg"
+        alt=""
+      />
+    </a>
+    <label>درسای من</label>
+  </div>
+
+  <div
+    class="d-flex flex-column justify-content-center align-items-center py-3"
+  >
+    <a href="#">
+      <img
+        class="iconsizing"
+        src="../assets/icons/nav-icon/section-icon/layer-svgrepo-com.svg"
+        alt=""
+    /></a>
+    <label>لیست دوره ها</label>
+  </div>
+  <div
+    class="d-flex flex-column justify-content-center align-items-center py-3"
+  >
+    <a href="#">
+      <img
+        class="iconsizing"
+        src="../assets/icons/nav-icon/section-icon/task-square-svgrepo-com.svg"
+        alt=""
+    /></a>
+    <label>داشبورد</label>
+  </div>
+  <div
+    class="d-flex flex-column justify-content-center align-items-center py-3"
+  >
+    <a href="#">
+      <img
+        class="iconsizing"
+        src="../assets/icons/nav-icon/section-icon/play-circle-svgrepo-com.svg"
+        alt=""
+    /></a>
+    <label>پخش زنده</label>
+  </div>
+  <div
+    class="d-flex flex-column justify-content-center align-items-center py-3"
+  >
+    <a href="#">
+      <img
+        class="iconsizing"
+        src="../assets/icons/nav-icon/section-icon/document-text-svgrepo-com.svg"
+        alt=""
+    /></a>
+    <label>پیام ها</label>
+  </div>
+  <div
+    class="d-flex flex-column justify-content-center align-items-center py-3"
+  >
+    <a href="#">
+      <img
+        class="iconsizing"
+        src="../assets/icons/nav-icon/section-icon/empty-wallet-svgrepo-com.svg"
+        alt=""
+    /></a>
+    <label>سوابق مالی</label>
+  </div>
+</section>
